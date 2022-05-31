@@ -30,6 +30,8 @@ export class MoviesComponent implements OnInit {
   }
 
 
+  changePage():void{
+    this.router.navigateByUrl('/page=2')
 
-
+  }
 }

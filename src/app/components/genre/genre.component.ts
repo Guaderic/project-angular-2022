@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IGenre} from "../../interfaces/IGenre";
+import {MovieService} from "../../services/movie.service";
 
 @Component({
   selector: 'app-genre',
@@ -9,12 +10,13 @@ import {IGenre} from "../../interfaces/IGenre";
 export class GenreComponent implements OnInit {
   @Input()
   genre:IGenre
-  constructor() { }
+
+
+  constructor(private movieService:MovieService) { }
 
   ngOnInit(): void {
   }
 
-  searchFilmByGenre() {
 
-  }
+
 }

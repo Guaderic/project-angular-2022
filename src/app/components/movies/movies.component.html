@@ -5,6 +5,9 @@
                   totalItems: count
                 };" [movie]="movie"></app-movie>
 </div>
+<div class="pagination">
 <pagination-controls
   (pageChange)="handleChangePage($event)"
 ></pagination-controls>
+  <button mat-raised-button color="primary" (click)="changePage()">Next List</button>
+</div>

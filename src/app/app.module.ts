@@ -19,6 +19,7 @@ import { GenreComponent } from './components/genre/genre.component';
 import {NgxStarRatingModule} from "ngx-star-rating";
 import {ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     MatSlideToggleModule,
     NgxStarRatingModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatButtonModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

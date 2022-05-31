@@ -1,19 +1,25 @@
 .header{
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 150px;
-  background: cadetblue;
+  background: dimgray;
   font-size: 35px;
-  display: flex;
   align-items: center;
   align-content: space-between;
 
 
 }
 a{
+  display: flex;
   text-decoration: none;
   color: snow;
 }
 .toggle{
   color: snow;
   font-size: 20px;
+}
+
+.img-logo{
+  width: 100px;
 }
