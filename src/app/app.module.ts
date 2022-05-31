@@ -9,6 +9,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MainInterceptor} from "./main.interceptor";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from "@angular/material/slider";
+import {MatCardModule} from "@angular/material/card";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { GenresComponent } from './components/genres/genres.component';
+import { GenreComponent } from './components/genre/genre.component';
+import {NgxStarRatingModule} from "ngx-star-rating";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -16,12 +26,22 @@ import {MainInterceptor} from "./main.interceptor";
     MoviesComponent,
     MovieComponent,
     HeaderComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    MovieDetailsComponent,
+    GenresComponent,
+    GenreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    MatSlideToggleModule,
+    NgxStarRatingModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

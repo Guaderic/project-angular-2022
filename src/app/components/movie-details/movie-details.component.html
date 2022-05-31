@@ -1,0 +1,6 @@
+<mat-card *ngIf="movie" class="details_container">
+  <div class="img"><img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="movie_img"></div>
+  <div class="text">{{movie.overview}}</div>
+  <div>popularity - {{movie.popularity}}</div>
+
+</mat-card>

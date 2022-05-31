@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {IMovie} from "../../interfaces/IMovie";
 import {MovieService} from "../../services/movie.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {IMovies} from "../../interfaces/IMovies";
+
+
 
 @Component({
   selector: 'app-movies',
@@ -12,6 +13,11 @@ import {IMovies} from "../../interfaces/IMovies";
 export class MoviesComponent implements OnInit {
   movies:IMovie[]
   page:number
+  query:string
+  count:number = 0;
+  pageSize = 8;
+  currentIndex = -1;
+  currentPost: IMovie;
   constructor(private movieService:MovieService, private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
@@ -19,5 +25,11 @@ export class MoviesComponent implements OnInit {
       this.movieService.getAllMovies(page||1).subscribe(value => this.movies = value.results)
     })
   }
+  handleChangePage(event: number): void {
+    this.page = event;
+  }
+
+
+
 
 }
