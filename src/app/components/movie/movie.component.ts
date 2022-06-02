@@ -10,7 +10,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class MovieComponent implements OnInit {
 @Input()
   movie:IMovie
-  imagine:string = ''
   constructor(private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {

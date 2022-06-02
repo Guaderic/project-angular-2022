@@ -1,13 +1,11 @@
 <div class="container">
   <app-movie *ngFor="let movie of movies|paginate : {
-                  itemsPerPage: pageSize,
+                  itemsPerPage: total,
                   currentPage: page,
-                  totalItems: count
+                  totalItems: total
                 };" [movie]="movie"></app-movie>
 </div>
 <div class="pagination">
-<pagination-controls
-  (pageChange)="handleChangePage($event)"
-></pagination-controls>
-  <button mat-raised-button color="primary" (click)="changePage()">Next List</button>
+  <pagination-controls>(pageChange)="pageChangeEvent($event)</pagination-controls>
 </div>
+

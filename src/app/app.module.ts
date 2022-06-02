@@ -20,6 +20,7 @@ import {NgxStarRatingModule} from "ngx-star-rating";
 import {ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
 import {MatButtonModule} from "@angular/material/button";
+import { MovieGenresComponent } from './components/movie-genres/movie-genres.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatButtonModule} from "@angular/material/button";
     MainLayoutComponent,
     MovieDetailsComponent,
     GenresComponent,
-    GenreComponent
+    GenreComponent,
+    MovieGenresComponent
   ],
   imports: [
     BrowserModule,

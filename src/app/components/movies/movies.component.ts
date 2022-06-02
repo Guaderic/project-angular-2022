@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {IMovie} from "../../interfaces/IMovie";
 import {MovieService} from "../../services/movie.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
+
+
 
 
 
@@ -12,26 +14,41 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class MoviesComponent implements OnInit {
   movies:IMovie[]
-  page:number
+  page:number = 1
   query:string
-  count:number = 0;
-  pageSize = 8;
-  currentIndex = -1;
+  total:number = 0;
+  currentPage: number = 0;
+
+
   currentPost: IMovie;
-  constructor(private movieService:MovieService, private route:ActivatedRoute, private router:Router) { }
+  constructor(private movieService:MovieService, private route:ActivatedRoute, private router:Router,
+              ) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(({page})=>{
-      this.movieService.getAllMovies(page||1).subscribe(value => this.movies = value.results)
+
+
+
+  this.route.queryParams.subscribe(({page})=>{
+    this.movieService.getAllMovies(page||1).subscribe(value => {
+      this.movies = value.results;
     })
+  })
   }
-  handleChangePage(event: number): void {
+
+  getAllMovies(){
+    this.movieService.getAllMovies(this.page)
+      .subscribe((response: any) => {
+        this.movies = response.data;
+
+      });
+  }
+
+  pageChangeEvent(event: number){
     this.page = event;
-  }
-
-
-  changePage():void{
-    this.router.navigateByUrl('/page=2')
+    this.getAllMovies();
 
   }
+
+
+
 }
