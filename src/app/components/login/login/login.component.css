@@ -1,0 +1,17 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding-top: 40px;
+  width: 300px;
+  height: 300px;
+
+}
+.back{
+  background: #526385;
+  height: 100%;
+}
+p{
+  color: red;
+}

@@ -15,7 +15,7 @@ export class MovieService {
   constructor(private httpClient:HttpClient) { }
 
   getAllMovies(page:number):Observable<IMovies>{
-    return this.httpClient.get<IMovies>(urls.movie + '?page='+page)
+    return this.httpClient.get<IMovies>(urls.movie + '?page=' + page)
   }
 
 
@@ -23,9 +23,9 @@ export class MovieService {
     return this.httpClient.get<IMovie>(urls.movieDetails + '/'+ id)
   }
 
-  getMovies(page: number){
-    return this.httpClient.get(urls.movie + '?page=' + page);
-  }
+
+
+
 
 
 }

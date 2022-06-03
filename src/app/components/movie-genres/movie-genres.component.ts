@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+import {GenreService} from "../../services/genre.service";
+import {IGenre} from "../../interfaces/IGenre";
+
 
 
 @Component({
@@ -10,10 +13,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class MovieGenresComponent implements OnInit {
 
 
-  constructor( ) {
+  constructor(private service:GenreService) {
   }
+  @Input()
+
+
 
   ngOnInit() {
+
 
   }
 

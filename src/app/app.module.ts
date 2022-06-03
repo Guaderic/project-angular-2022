@@ -21,6 +21,11 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
 import {MatButtonModule} from "@angular/material/button";
 import { MovieGenresComponent } from './components/movie-genres/movie-genres.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { NotFoundComponent } from './components/not-found/not-found/not-found.component';
+import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { MovieGenresComponent } from './components/movie-genres/movie-genres.com
     MovieDetailsComponent,
     GenresComponent,
     GenreComponent,
-    MovieGenresComponent
+    MovieGenresComponent,
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,9 @@ import { MovieGenresComponent } from './components/movie-genres/movie-genres.com
     NgxStarRatingModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-    MatButtonModule
+    MatButtonModule,
+    MatBottomSheetModule,
+    MatTableModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

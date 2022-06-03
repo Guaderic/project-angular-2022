@@ -1,0 +1,17 @@
+
+<div class="back">
+<div  class="container">
+<mat-card >
+<mat-card-title>Login</mat-card-title>
+  <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+    <div><label >Email:<input formControlName='email' type="text"></label></div>
+    <p *ngIf="loginForm.get('email')?.invalid">Email is required</p>
+    <div><label >Password:<input formControlName='password' type="text"></label></div>
+    <p *ngIf="loginForm.get('password')?.invalid">Password is required</p>
+    <mat-card-actions>
+    <button mat-button [disabled]="loginForm.invalid">Login</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+</div>
+</div>
