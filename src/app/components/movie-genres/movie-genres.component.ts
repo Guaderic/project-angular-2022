@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 import {GenreService} from "../../services/genre.service";
-import {IGenre} from "../../interfaces/IGenre";
+import {IMovie} from "../../interfaces/IMovie";
 
 
 
@@ -16,7 +16,7 @@ export class MovieGenresComponent implements OnInit {
   constructor(private service:GenreService) {
   }
   @Input()
-
+  movie:IMovie
 
 
   ngOnInit() {

@@ -1,1 +1,1 @@
-export const backGroundImages ='https://oir.mobi/uploads/posts/2021-03/1616436851_33-p-zadnii-fon-dlya-intro-40.jpg'
+export const avatar ='https://www.youloveit.ru/uploads/posts/2020-04/1586360515_youloveit_ru_dipper_gravity_falls_na_avu02.jpg'

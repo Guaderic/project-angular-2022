@@ -1,4 +1,4 @@
 
-<div><button mat-button [routerLink]="'/genres-film'">{{genre.name}}</button></div>
-
+<div><button mat-button [routerLink]="'/genres-film'" (click)="getFilmByGenre(id)">{{genre.name}}</button></div>
+<app-movie-genres *ngFor="let item of movies" [movie]="item"></app-movie-genres>
 
