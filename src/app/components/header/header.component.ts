@@ -24,8 +24,4 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  changeTheme() {
-
-
-  }
 }
