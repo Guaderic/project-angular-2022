@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -8,12 +8,24 @@ import {AuthService} from "../../services/auth.service";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private service:AuthService) { }
+
+  setDark = false;
+
+  constructor(private service: AuthService) {
+  }
 
   ngOnInit(): void {
+
   }
+
 
   logout() {
     this.service.logout()
+  }
+
+
+  changeTheme() {
+
+
   }
 }

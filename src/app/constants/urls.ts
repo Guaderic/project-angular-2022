@@ -8,5 +8,6 @@ export const urls = {
   movie:`${API}discover/movie`,
   genre:`${API}genre/movie/list`,
   movieDetails:`${API}movie`,
-  FilmByGenre:`${API}discover/movie?with_genres=`
+  FilmByGenre:`${API}discover/movie?with_genres=`,
+  search:`${API}search/movie?query=`
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {IMovie} from "../../interfaces/IMovie";
 import {MovieService} from "../../services/movie.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -11,6 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
+
   movies: IMovie[]
   page: number
   counter: number = 1

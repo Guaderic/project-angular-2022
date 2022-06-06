@@ -8,6 +8,7 @@ import {MovieGenresComponent} from "./components/movie-genres/movie-genres.compo
 import {LoginComponent} from "./components/login/login/login.component";
 import {NotFoundComponent} from "./components/not-found/not-found/not-found.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {MovieSearchComponent} from "./components/movie-search/movie-search/movie-search.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
     children: [
       {path: 'movies', component: MoviesComponent},
       {path: 'movies/:id', component: MovieDetailsComponent},
-      {path: 'genres-film', component: MovieGenresComponent}
+      {path: 'genres-film', component: MovieGenresComponent},
+      {path:'search', component:MovieSearchComponent}
     ]
   },
   {path: '**', component: NotFoundComponent}

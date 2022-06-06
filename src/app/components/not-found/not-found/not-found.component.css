@@ -1,0 +1,9 @@
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #526385;
+  height: 100%;
+  color: snow;
+
+}

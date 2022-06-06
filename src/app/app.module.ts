@@ -26,6 +26,8 @@ import { NotFoundComponent } from './components/not-found/not-found/not-found.co
 import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatTableModule} from "@angular/material/table";
+import { SearchFilmComponent } from './components/searchFilm/search-film/search-film.component';
+import { MovieSearchComponent } from './components/movie-search/movie-search/movie-search.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {MatTableModule} from "@angular/material/table";
     GenreComponent,
     MovieGenresComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SearchFilmComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,
