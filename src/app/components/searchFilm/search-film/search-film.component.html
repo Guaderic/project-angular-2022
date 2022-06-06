@@ -1,0 +1,7 @@
+<form [formGroup]="searchForm" (ngSubmit)="SubmitSearch()" >
+  <div><label ><input formControlName='searchFilm' type="text"></label></div>
+  <button>Search</button>
+</form>
+<div class="container">
+<app-movie-search *ngFor="let item of movies" [movie]="item"></app-movie-search>
+</div>

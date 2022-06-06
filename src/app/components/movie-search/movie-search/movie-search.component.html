@@ -1,0 +1,19 @@
+<mat-card *ngIf="movie" class="movie-card">
+  <mat-card-header>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+
+    <mat-card-subtitle>popularity - {{movie.popularity}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src='https://image.tmdb.org/t/p/w500{{movie.poster_path}}' alt="movie_img">
+  <mat-card-content>
+    <p>
+      release date - {{movie.release_date}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+
+
+  </mat-card-actions>
+</mat-card>
+
+
