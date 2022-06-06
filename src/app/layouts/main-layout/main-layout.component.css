@@ -2,5 +2,13 @@
   width: 100%;
   min-height: 1000px;
   position: absolute;
+  background: lightsteelblue;
+}
+
+.dark-container{
+  width: 100%;
+  min-height: 1000px;
+  position: absolute;
   background: #526385;
 }
+

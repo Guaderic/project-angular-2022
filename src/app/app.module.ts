@@ -28,6 +28,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatTableModule} from "@angular/material/table";
 import { SearchFilmComponent } from './components/searchFilm/search-film/search-film.component';
 import { MovieSearchComponent } from './components/movie-search/movie-search/movie-search.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { UserComponent } from './components/user/user/user.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { MovieSearchComponent } from './components/movie-search/movie-search/mov
     LoginComponent,
     NotFoundComponent,
     SearchFilmComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,9 @@ import { MovieSearchComponent } from './components/movie-search/movie-search/mov
     NgxPaginationModule,
     MatButtonModule,
     MatBottomSheetModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonToggleModule,
+    MatCheckboxModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

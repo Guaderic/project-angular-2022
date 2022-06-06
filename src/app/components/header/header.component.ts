@@ -9,7 +9,7 @@ import {AuthService} from "../../services/auth.service";
 export class HeaderComponent implements OnInit {
 
 
-  setDark = false;
+  setDark:boolean;
 
   constructor(private service: AuthService) {
   }

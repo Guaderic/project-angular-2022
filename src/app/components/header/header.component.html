@@ -1,13 +1,13 @@
-<div class="header">
-<!--  <div><a routerLinkActive="active" routerLink="/">User</a></div>-->
+<div [class]="setDark ? 'dark' : 'header'">
+
   <div>
-    <div class="user text">
+    <a  class="user" class="text" routerLink="user">
       User
       <img src="https://www.youloveit.ru/uploads/posts/2020-04/1586360515_youloveit_ru_dipper_gravity_falls_na_avu02.jpg" alt="avatar">
-    </div>
+    </a>
   </div>
   <div><a class="text" routerLink="movies">Movies</a></div>
   <div><a class ="text" routerLink="home" (click)="logout()">Log Out</a></div>
-
+<button (click)="setDark = !setDark" class="mat-button">change theme</button>
 
 </div>

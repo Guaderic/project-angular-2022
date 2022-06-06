@@ -1,9 +1,15 @@
-<app-header></app-header>
-<div class="container">
+
+<div class="light">
+<app-header xmlns="http://www.w3.org/1999/html"></app-header>
+<div [class]="setDark? 'container':'dark-container'">
   <app-genres></app-genres>
   <app-search-film></app-search-film>
+  <div>
+  <button class="mat-button" (click)="setDark = !setDark">Change theme</button>
+  </div>
   <router-outlet></router-outlet>
-</div>
 
+</div>
+</div>
 
 
