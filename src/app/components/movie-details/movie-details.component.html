@@ -1,6 +1,13 @@
 <mat-card *ngIf="movie" class="details_container">
-  <div class="img"><img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="movie_img"></div>
+  <div class="img"><img src="https://image.tmdb.org/t/p/w400{{movie.poster_path}}" alt="movie_img"></div>
   <div class="text">{{movie.overview}}</div>
   <div>popularity - {{movie.popularity}}</div>
+  <form class="form" [formGroup]="form" (ngSubmit)="setComment()">
+    <div><label><input  formControlName="setComment" type="text"></label></div>
+    <button class="mat-button">Comment</button>
+    <ul *ngFor="let item of comment">
+      <li>{{year}}- {{hours}}:{{minutes}}--{{item}}</li>
+    </ul>
+  </form>
 
 </mat-card>
