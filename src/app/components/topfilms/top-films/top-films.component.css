@@ -1,0 +1,13 @@
+.movie-card {
+  max-width: 180px;
+  margin: 10px;
+}
+
+.movie-header-image {
+  background-size: cover;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

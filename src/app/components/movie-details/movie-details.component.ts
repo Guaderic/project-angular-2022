@@ -28,6 +28,7 @@ export class MovieDetailsComponent implements OnInit {
 
     this.form = new FormGroup({
       'setComment': new FormControl('')
+
     })
 
   }
@@ -36,6 +37,7 @@ export class MovieDetailsComponent implements OnInit {
     let value = Object.values(this.form.value)
     let value2 = value.toString()
     this.comment.push(value2)
+
 
 
 

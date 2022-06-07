@@ -10,6 +10,7 @@ import {NotFoundComponent} from "./components/not-found/not-found/not-found.comp
 import {AuthGuard} from "./guards/auth.guard";
 import {MovieSearchComponent} from "./components/movie-search/movie-search/movie-search.component";
 import {UserComponent} from "./components/user/user/user.component";
+import {TopFilmsComponent} from "./components/topfilms/top-films/top-films.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -23,7 +24,9 @@ const routes: Routes = [
       {path: 'movies/:id', component: MovieDetailsComponent},
       {path: 'genres-film', component: MovieGenresComponent},
       {path:'search', component:MovieSearchComponent},
-      {path:'user', component:UserComponent}
+      {path:'user', component:UserComponent},
+      {path:'top_rated', component:TopFilmsComponent}
+
     ]
   },
   {path: '**', component: NotFoundComponent}

@@ -31,6 +31,7 @@ import { MovieSearchComponent } from './components/movie-search/movie-search/mov
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { UserComponent } from './components/user/user/user.component';
+import { TopFilmsComponent } from './components/topfilms/top-films/top-films.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserComponent } from './components/user/user/user.component';
     NotFoundComponent,
     SearchFilmComponent,
     MovieSearchComponent,
-    UserComponent
+    UserComponent,
+    TopFilmsComponent
   ],
   imports: [
     BrowserModule,

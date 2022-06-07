@@ -9,5 +9,6 @@ export const urls = {
   genre:`${API}genre/movie/list`,
   movieDetails:`${API}movie`,
   FilmByGenre:`${API}discover/movie?with_genres=`,
-  search:`${API}search/movie?query=`
+  search:`${API}search/movie?query=`,
+  topMovie:`${API}movie/top_rated`
 }

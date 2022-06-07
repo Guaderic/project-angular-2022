@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SearchService} from "../../../services/search.service";
 import {IMovie} from "../../../interfaces/IMovie";
 import {FormControl, FormGroup} from "@angular/forms";
@@ -13,6 +13,7 @@ export class SearchFilmComponent implements OnInit {
   searchForm:FormGroup
   movies:IMovie[]
   query:string=''
+
   constructor(private service:SearchService, private router:Router) { }
 
   ngOnInit(): void {
@@ -35,4 +36,5 @@ export class SearchFilmComponent implements OnInit {
 
     this.service.searchMovie(this.query).subscribe(value => this.movies = value.results)
   }
+
 }
