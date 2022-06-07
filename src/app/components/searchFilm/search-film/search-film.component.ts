@@ -21,7 +21,7 @@ export class SearchFilmComponent implements OnInit {
 
 
     this.searchForm = new FormGroup({
-      'searchFilm':new FormControl('')
+      searchFilm:new FormControl(null)
 
     })
 
@@ -35,6 +35,7 @@ export class SearchFilmComponent implements OnInit {
     this.query = value2
 
     this.service.searchMovie(this.query).subscribe(value => this.movies = value.results)
+    this.searchForm.reset()
   }
 
 }
