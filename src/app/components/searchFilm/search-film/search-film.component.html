@@ -1,7 +1,9 @@
+<button class="mat-button" routerLink="/movies">Back</button>
 <div class="wrap">
 <form [formGroup]="searchForm" (ngSubmit)="SubmitSearch()" >
   <div><label ><input formControlName='searchFilm' type="text"></label></div>
   <button class="mat-button-toggle-checked">Search</button>
+
 </form>
   <div>
     <button class="mat-button" routerLink="top_rated">Top movies</button>
